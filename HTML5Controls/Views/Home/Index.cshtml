@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<link href="jquery.timepicker.css" rel="stylesheet" type="text/css" />
+
+<body style="background-color:lightgray">
+
+    <div>
+        <h1>Lightweight Date and Time Picker</h1>
+    </div>
+
+    <div>
+
+        <p style="font-size:larger">
+            Please pick a date for transactions:  />
+            <input type="date" id="datepicker" class="datepicker" style="font-size:larger" />
+            <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+            <script type="text/javascript" src="jquery-ui.min.js"></script>
+            <script type="text/javascript">
+                $(function () {
+                    if (!Modernizr.inputtypes.date) {
+                        $(".datepicker").datepicker();
+                    }
+                });
+            </script>
+
+            <div id="container">
+                <div class="example">
+                    <label for="time" id="myPicker1">From:</label>
+                    <select id="myPicker">
+                    </select>
+                
+                    <label for="time" id="myPicker3">To:</label>
+                    <select id="myPicker2">
+                    </select>
+                </div>
+                <div id="mySpan"></div>
+            </div>
+            @*<div id="container">
+                    <div class="example">
+                        <label for="time" id="myPicker1">To:</label>
+                        <select id="myPicker1">
+                        </select>
+                    </div>
+                    <script type="text/javascript" src="~/Scripts/main.js"></script>
+                    <div id="mySpan1"></div>
+            </div>*@
+
+    </div>
+</body>
+<script type="text/javascript" src="~/Scripts/main.js"></script>
+
+
+
